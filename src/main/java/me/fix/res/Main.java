@@ -9,7 +9,7 @@ public class Main {
         int opt;
 
         do {
-            System.out.println("These are the features: ");
+            System.out.println("\nThese are the features: ");
             if (user != null){
 
                 System.out.println("  1) Add group.");
@@ -43,6 +43,7 @@ public class Main {
                     case 1 -> {
                         user = User.create();
                         user.addGroup();
+                        System.out.println("\nUser created.");
                     }
                     case 2 -> {
                         user = User.importUser();
@@ -52,3 +53,47 @@ public class Main {
         }while (opt != 0);
     }
 }
+
+//public  void printSchedule() {
+//        // Etiquetas de hora
+//        System.out.print("      ");
+//        for (int i = 0; i < horario[0].length; i++) {
+//            if ((i+7) < 10) {
+//                System.out.print(" " + (i+7) + "  ");
+//            } else {
+//                System.out.print(" " + (i+7) + " ");
+//            }
+//        }
+//        System.out.println();
+//
+//        // Separador de encabezado
+//        System.out.print("     ");
+//        for (int i = 0; i < horario[0].length; i++) {
+//            System.out.print("+---");
+//        }
+//        System.out.println("+");
+//
+//        // Cuerpo de la tabla
+//        String[] daysOfWeek = {"Lun", "Mar", "Mie", "Jue", "Vie", "Sab"};
+//        for (int i = 0; i < horario.length; i++) {
+//            // Etiqueta de día
+//            System.out.print(daysOfWeek[i] + "  |");
+//
+//            for (int j = 0; j < horario[i].length; j++) {
+//                if (horario[i][j]) {
+//                    System.out.print(" X |");
+//                } else {
+//                    System.out.print("   |");
+//                }
+//            }
+//            System.out.println();
+//
+//            // Separador entre filas
+//            System.out.print("     -");
+//            for (int j = 0; j < horario[i].length; j++) {
+//                System.out.print("----");
+//            }
+//            System.out.println();
+//        }
+//    }
+// private boolean[][] horario = new boolean[6][16];
